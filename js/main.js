@@ -161,6 +161,9 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+/* COMMENT : Addition of the alt attribute for the restaurant image
+   for accessibility purposes. */
+  image.alt = `representative picture of the ${restaurant.name} restaurant`;
   li.append(image);
 
   const name = document.createElement('h1');
@@ -178,6 +181,15 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+/* COMMENT : tabIndex 3 for every restaurant item in the restaurants
+             list, for accessibility purposes. This way, the
+             restaurant items will receive focus after the select
+             menus. */
+  more.tabIndex = 3;
+/* COMMENT : Addition of the aria-label attribute for the restaurant
+             <a> tag for accessibility purposes. */
+  more.setAttribute('aria-label', `Link to ${restaurant.name}
+                        restaurant details page`);
   li.append(more)
 
   return li
@@ -193,11 +205,10 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     marker.on("click", onClick);
     function onClick() {
       window.location.href = marker.options.url;
-    }
+    };
     self.markers.push(marker);
   });
-
-} 
+}
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
