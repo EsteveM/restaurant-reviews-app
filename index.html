@@ -2,7 +2,6 @@
 <!-- COMMENT: Adding the language is beneficial for accessibility
               purposes, as tools will know the intended language -->
 <html lang="en">
-
 <head>
 <!-- COMMENT: We add meta viewport for responsiveness purposes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +13,15 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
   <title>Restaurant Reviews</title>
 </head>
-
 <body>
 <!-- COMMENT: The tab order will be:
         1) "Restaurant Reviews" link - tabindex  = "1"
         2) "Neighborhoods-select" select menu - tabindex = "2"
         3) "Cuisines-select" select menu - tabindex = "2"
-        4) "Restaurant item within restaurants list" - tabindex = "3"
+        4) "Restaurant items within restaurants list" - tabindex = "3"
             by JavaScript.
-        5) "Map" - tabindex = "0"
-        6) "Footer" - implicitly focusable -->
+        5) "Footer" - tabindex = "4"
+        6) "Map" - tabindex = "0"            -->
 <!-- COMMENT: We also associate aria-label at several points for
               accessibility purposes. In this way, a number of elements
               are labelled. In all these cases, there is no visible text label on the screen that conveys the intended meaning. -->
@@ -32,7 +30,6 @@
       <h1><a aria-label="Home page link" tabindex="1" href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
-
   <main id="maincontent">
     <section id="map-container">
 <!-- COMMENT: The map is implemented by a div, which is no useful for assistive technologies. As a result, it is going to be helpful to associate an aria role to the map, which indicates its role. In this case, to my mind, it is appropriate to say that the role of the map is application, meaning that it is a desktop-like web application. -->
@@ -54,15 +51,11 @@
     </section>
   </main>
   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
-  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
-  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+  <script src="js/dbhelper.js"></script>
+  <script src="js/main.js"></script>
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
-
-
   <footer id="footer">
-    Copyright (c) 2017 <a aria-label="Home page link in copyright statement" href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2017 <a aria-label="Home page link in copyright statement" tabindex="4" href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
-
 </body>
-
 </html>

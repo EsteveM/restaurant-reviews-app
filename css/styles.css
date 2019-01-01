@@ -13,7 +13,6 @@
   border: 0.4vw solid red;
   text-decoration: none;
 }
-
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 /*font-size: 10pt;*/
@@ -61,7 +60,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #footer {
 /* COMMENTS : We want contrast ratio in the footer message
               to be good enough for accessibility purposes. */
-  background-color: #3D3D3D;
+  background-color: #3d3d3d;
 /*background-color: #444;*/
   color: #aaa;
 /*font-size: 8pt;*/
@@ -126,7 +125,7 @@ nav h1 a {
 #breadcrumb li a {
 /* COMMENTS : We want contrast ratio in the breadcrumb home link
               to be good enough for accessibility purposes. */
-    color: #0169C2;
+    color: #0169c2;
   /*color: #0275d8;*/
     text-decoration: none;
 }
@@ -151,7 +150,7 @@ nav h1 a {
   width: 100%;
 /*height: 50px;*/
   height: 32vw;
-  background-color: #3397DB;
+  background-color: #3397db;
   align-items: center;
 }
 .filter-options h2 {
@@ -231,7 +230,7 @@ nav h1 a {
 #restaurants-list li h1 {
 /* COMMENTS : We want contrast ratio in the leaflet attribution
               message to be good enough for accessibility purposes. */
-  color: #D87500;
+  color: #d87500;
 /*color: #f18200;*/
   font-family: Arial,sans-serif;
 /*font-size: 14pt;*/
@@ -312,7 +311,7 @@ nav h1 a {
 #restaurant-name {
 /* COMMENTS : We want contrast ratio in the restaurant
               name to be good enough for accessibility purposes. */
-  color: #C26900;
+  color: #c26900;
 /*color: #f18200;*/
   font-family: Arial,sans-serif;
 /*font-size: 20pt;*/
@@ -369,7 +368,7 @@ nav h1 a {
 #reviews-container h2 {
 /* COMMENTS : We want contrast ratio in the reviews
               heading to be good enough for accessibility purposes. */
-  color: #C66B00;
+  color: #c66b00;
 /*color: #f58500;*/
 /*font-size: 24pt;*/
   font-size: 8vw;
@@ -431,7 +430,7 @@ nav h1 a {
 /* ====================== Breadcrumb ====================== */
   #breadcrumb {
   /*padding: 1vw 4vw 2vw;*/
-    padding: 0.8vw 3.6vw 1.7vw;  
+    padding: 0.8vw 3.6vw 1.7vw;
   /*font-size: 5vw;*/
     font-size: 4.4vw;
   }
@@ -445,7 +444,7 @@ nav h1 a {
   }
 
 /* ====================== Restaurant Filtering ====================== */
-  
+
   .filter-options {
   /*height: 32vw;*/
     height: 26vw;
@@ -517,7 +516,7 @@ nav h1 a {
   /*font-size: 4vw;*/
     font-size: 3.25vw;
   /*letter-spacing: 0.2vw;*/
-    letter-spacing: 0.15w;
+    letter-spacing: 0.15vw;
   /*padding: 0.5vw;*/
     padding: 0.25vw;
   }
@@ -622,7 +621,7 @@ nav h1 a {
 /* ====================== Breadcrumb ====================== */
   #breadcrumb {
   /*padding: 0.8vw 3.6vw 1.7vw;*/
-    padding: 0.7vw 3.2vw 1.5vw;  
+    padding: 0.7vw 3.2vw 1.5vw;
   /*font-size: 4.4vw;*/
     font-size: 3.9vw;
   }
@@ -636,7 +635,7 @@ nav h1 a {
   }
 
 /* ====================== Restaurant Filtering ====================== */
-  
+
   .filter-options {
   /*height: 26vw;*/
     height: 22vw;
@@ -708,7 +707,7 @@ nav h1 a {
   /*font-size: 3.25vw;*/
     font-size: 2.6vw;
   /*letter-spacing: 0.15vw;*/
-    letter-spacing: 0.11w;
+    letter-spacing: 0.11vw;
   /*padding: 0.25vw;*/
     padding: 0.18vw;
   }
@@ -813,7 +812,7 @@ nav h1 a {
 /* ====================== Breadcrumb ====================== */
   #breadcrumb {
   /*padding: 0.7vw 3.2vw 1.5vw;*/
-    padding: 0.55vw 3vw 1.2vw;  
+    padding: 0.55vw 3vw 1.2vw;
   /*font-size: 3.9vw;*/
     font-size: 3.5vw;
   }
@@ -827,7 +826,7 @@ nav h1 a {
   }
 
 /* ====================== Restaurant Filtering ====================== */
-  
+
   .filter-options {
   /*height: 22vw;*/
     height: 17vw;
@@ -899,7 +898,7 @@ nav h1 a {
   /*font-size: 2.6vw;*/
     font-size: 2.2vw;
   /*letter-spacing: 0.11vw;*/
-    letter-spacing: 0.08w;
+    letter-spacing: 0.08vw;
   /*padding: 0.18vw;*/
     padding: 0.15vw;
   }
@@ -1022,7 +1021,7 @@ nav h1 a {
   }
 
 /* ====================== Restaurant Filtering ====================== */
-  
+
   .filter-options {
   /*height: 22vw;*/
     height: 204px;

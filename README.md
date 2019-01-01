@@ -1,33 +1,68 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
+# Restaurant Reviews App
 
-## Project Overview: Stage 1
+This project is a fully browser-based implementation of an already existing restaurant reviews website. Initially, the code is not responsive, and it does not provide any standard accessibility features. In addition, it does not work offline. The goal of this project is to turn this website into one that provides responsiveness, accessibility, and that works offline via a service worker.
 
-For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
+## Table of Contents
 
-### Specification
+* [Description of the Project](#description-of-the-game)
+* [Getting Started](#getting-started)
+* [Contributing](#contributing)
 
-You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality.
+## Description of the Project
 
-### Project Rubric
+The project is made up of three phases, which are described below:
 
-Your project will be evaluated by a Udacity code reviewer according to the [Restaurant Reviews project rubric](https://review.udacity.com/#!/rubrics/1090/view). Please review for detailed project requirements. The rubric should be a resource you refer to periodically to make sure your project meets specifications.
+### Provision of Responsiveness
 
-### What do I do from here?
+ Several features have been added to the code so that it becomes responsive, and, as such, fully functional on a range of viewports. The main additions are:
 
-1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer.
+ * A meta viewport has been added.
+ * Flexbox has been used to create a a responsive grid-based layout to the list of restaurants. Restaurants will also wrap if necessary.
+ * Media queries and relative units have been used. In particular, four breakpoints have been established: at 500, 750, 1000, and 1200 pixels.
 
-    * In a terminal, check the version of Python you have: `python -V`. If you have Python 2.x, spin up the server with `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use.) For Python 3.x, you can use `python3 -m http.server 8000`. If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
-   * Note -  For Windows systems, Python 3.x is installed as `python` by default. To start a Python 3.x server, you can simply enter `python -m http.server 8000`.
-2. With your server running, visit the site: `http://localhost:8000`, and look around for a bit to see what the current experience looks like.
-3. Explore the provided code, and start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
-4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
+### Provision of Accessibility
 
-## Leaflet.js and Mapbox:
+By the same token, a number of features have been included to the code so that it provides accessibility. The main ones are:
 
-This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/). Mapbox is free to use, and does not require any payment information.
+* Addition of the language in the HTML.
+* The tab order of both the main page and the restaurant details page has been established by means of tabindex. This has been done at both HTML and JavaScript levels.
+* Aria-label has been included at several points for accessibility purposes. In this way, a number of elements are labelled. In all these cases, there is no visible text label on the screen that conveys the intended meaning.
+* Role has also been included where elements such as the map are implemented in such a way that their role is not clear for users of  assistive technologies.
+* At several points, background color has been adjusted to improve contrast perception (contrast ratio).
+* Elements which have focus have been clearly identified by means of a red border.
+* Addition of the alt attribute for the restaurant images.
 
-### Note about ES6
+### Provision of Offline Functionality
 
-Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future-proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
+Likewise, a number of features have been included so that visited app pages are accessible when the network condition is offline. The main additions have been:
+
+* Registration of a service worker.
+* At the install event, all necessary files are added to a cache once the installation is complete.
+* At the fetch event, files are recovered from the cache, if they are there. Otherwise, they are obtained online, and, in this case, also added to the cache.
+
+## Getting Started
+
+This is a fully browser-based application, so you will only need a browser to run it. There are no external dependencies.
+
+It is made up of a number of files. The main ones are:
+
+* index.html: It contains the main page HTML code.
+* restaurant.html: It contains the restaurant details page HTML code.
+* css\style.css: It contains the application's CSS code.
+* data\restaurants.json: It contains the application's data.
+* js\main.js: It contains the main page JavaScript code. The service worker registration is also coded here.
+* js\restaurant_info.js: It contains the restaurant details page JavaScript code.
+* js\dbhelper.js: It contains common database helper functions.
+* img\: It contains the application's images.
+* sw.js: It contains the service worker's code.
+* README.md: It contains the documentation file you are viewing right now.
+
+The application can be started by simply running an HTTP server, such as the one provided with Python. If you have Python 2.x, just run `python -m SimpleHTTPServer 8000` in a terminal. For Python 3.x do run `python3 -m http.server 8000`. If you do not have Python, you can  download and install it from Python's [website](https://www.python.org/). After that, you only need to visit the app's site at `http://localhost:8000`.
+
+It is also noteworthy that [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/) is used by the app.
+
+## Contributing
+
+This repository contains all the code that makes up the application. Individuals and I myself are encouraged to further improve this project. As a result, I will be more than happy to consider any pull requests.
+
+Finally, it would be highly appreciated that any contributions used ES6, to the best of your ability, for modern web browser compatibility reasons.

@@ -4,11 +4,24 @@ let restaurants,
 var newMap
 var markers = []
 
+/* COMMENT: Service Worker registration */
+registerServiceWorker = function() {
+  if (!navigator.serviceWorker) return;
+  navigator.serviceWorker.register('/sw.js').then(function() {
+    console.log('Service worker successfully registered');
+  }).catch(function() {
+    console.log('Service worker registration unsuccessful');
+  });
+}
+
+/* COMMENT: Service Worker registration. */
+registerServiceWorker();
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  initMap(); // added 
+  initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
 });
